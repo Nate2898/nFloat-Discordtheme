@@ -7,7 +7,11 @@
  * @invite 
  * @website https://nate2898.github.io
  * @source https://github.com/Nate2898/nFloat-Discordtheme
- * @updateUrl https://raw.githubusercontent.com/Nate2898/nFloat-Discordtheme/refs/heads/main/nFloat.theme.css
+ * @updateUrl https://raw.githubusercontent.com/Nate2898/nFloat-Discordtheme/main/nFloat.theme.css
  */
 
-@import url(https://raw.githubusercontent.com/Nate2898/nFloat-Discordtheme/refs/heads/main/nFloatCSS.theme.css)
+@import url(https://raw.githubusercontent.com/Nate2898/nFloat-Discordtheme/refs/heads/main/nFloatCSS.theme.css);
+
+:root{
+    --sidebar-delay-close: 1.3s;
+}

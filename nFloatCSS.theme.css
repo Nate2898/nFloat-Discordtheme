@@ -1,34 +1,47 @@
+/* 
+	name: nFloat Updated
+	description: Compact mobile mode for Discord
+	author: TheMintGamer
+	version: 1	
+	update_time: 0/3/2025
+	website: https://nate2898.github.io
+	source: https://github.com/Nate2898/nFloat-Discordtheme 
+*/ 
 
+:root{
+    --sidebar-delay-close: 1.3s;
+}
 
 /* New version */
 .sidebarList_c48ade {
     display: block;
-	/* position: absolute !important; */
     right: 0;
-    width: 72px !important;
+    width: 64px !important;
     min-width: 0 !important;
     overflow: hidden;
     background: var(--background-secondary);
-    /* z-index: 1000; */
     transition: width 0.3s ease-in-out;
     height: 100%;
 	container-type: normal !important;
 }
 
+/* Open sidebar on hover to user set width */
 .sidebar_c48ade:hover .sidebarList_c48ade{
     width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width)) !important;
     transition: width 0.3s ease-in-out;
 }
+
+/* quick actions fade */
 .sidebar_c48ade:not(:hover) .buttons__37e49 {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0s linear 1s;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease 1s, visibility 0s linear var(--sidebar-delay-close);
 }
 
 .sidebar_c48ade .buttons__37e49 {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s ease, visibility 0s linear 0s;
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 0.3s ease, visibility 0s linear;
 }
 /* Delay to close the sidebar */
 .sidebarList_c48ade:not(:hover) {
@@ -80,6 +93,9 @@
 		.nowPlayingColumn__133bf{
 			display: none;
 		}
+		.peopleColumn__133bf{
+			margin-right: 0px;
+		}
 	}
 
 	.header__7d20c{
@@ -94,15 +110,15 @@
 	}
 }
 
-/* Extreme small screen size */
-@media(max-width:650px){
+/* Extreme small screen size friends buttons */
+/* @media(max-width:650px){
 	.topPill_b3f026{
 		flex-wrap: wrap;
 	}
 	.scrollable__9293f{
 		flex-wrap: wrap;
 	}
-}
+} */
 
 
 /* Collapsing the members list */
@@ -122,7 +138,7 @@
 
 .container_c8ffbb:hover  {
 	position: absolute !important;
-	width: 240px !important; 
+	width: 267px !important; 
 	min-width: 240px !important;
 }
 
@@ -139,7 +155,19 @@
 
 /* Content area */
 .messagesWrapper__36d07{
-	margin-right: 34px;
+	margin-right: 63px;
+}
+
+/* Friend online content area */
+@media(min-width:680px){
+	.peopleColumn__133bf{
+		margin-right: 80px;
+	}
+}
+
+/* new message popup */
+.newMessagesBar__0f481{
+	margin-right: 20px;
 }
 
 /* Message input */
@@ -147,8 +175,47 @@
 	margin-right: 62px;
 }
 
+
 .scroller__36d07{
 	scroll-padding: 50px;
 }
 
+@media(max-width:1052px){
+	.sidebarRegion__23e6b{
+		width: 100px;
+	}
+}
 
+/* Settings menu */
+/* side settings menu */
+@media(max-width:1052px){
+	.sidebar__23e6b{
+		max-width: 200px !important;
+	}
+	.sidebarRegion__23e6b{
+		flex: 0;
+	}
+}
+@media(max-width: 650px){
+	.sidebarRegion__23e6b{
+		max-width: 50px !important;
+		transition: max-width 0.3s ease-in-out ;
+	}
+	.sidebarRegion__23e6b:hover{
+		max-width: 200px !important;
+		transition: max-width 0.3s ease-in-out ;
+	}
+}
+
+/* settings content */
+@media(max-width:1000px){
+	.contentColumn__23e6b{
+		width: 50% !important;
+	}
+	.contentTransitionWrap__23e6b{
+		width: 100% !important;
+	}
+	.contentRegion__23e6b {
+		width: 50% !important;
+	}
+}
