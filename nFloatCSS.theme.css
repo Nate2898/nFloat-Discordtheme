@@ -35,7 +35,7 @@
 .sidebar_c48ade:not(:hover) .buttons__37e49 {
 	opacity: 0;
 	visibility: hidden;
-	transition: opacity 0.3s ease 1s, visibility 0s linear var(--sidebar-delay-close);
+	transition: opacity 0.3s ease 1s, visibility 0s linear var(--sidebar-delay-close, 1.3s);
 }
 
 .sidebar_c48ade .buttons__37e49 {
@@ -45,7 +45,7 @@
 }
 /* Delay to close the sidebar */
 .sidebarList_c48ade:not(:hover) {
-    transition: width 0.3s ease-in-out 1s;
+    transition: width 0.3s ease-in-out var(--sidebar-delay-close, 1.3s);
 }
 
 /* Add a gap at the bottom of the message list for game activity */
