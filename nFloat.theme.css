@@ -2,7 +2,7 @@
  * @name nFloat Updated
  * @description Compact mobile mode for Discord
  * @author TheMintGamer
- * @version 2
+ * @version 1
  * @authorId 
  * @invite 
  * @website https://nate2898.github.io
@@ -10,8 +10,18 @@
  * @updateUrl https://raw.githubusercontent.com/Nate2898/nFloat-Discordtheme/main/nFloat.theme.css
  */
 
-@import url(https://raw.githubusercontent.com/Nate2898/nFloat-Discordtheme/refs/heads/main/nFloatCSS.theme.css);
+ @import url(https://raw.githubusercontent.com/Nate2898/nFloat-Discordtheme/refs/heads/main/nFloatCSS.theme.css);
 
-:root{
-    --sidebar-delay-close: 1.3s;
-}
+ :root{
+    /* Change the values below to customize the theme */
+     --sidebar-delay-close: 1.3s; /* Delay before the sidebar closes when not hovered Default: 1.3s */
+     --sidebar-closed-width: 64px; /* Width of the sidebar when not hovered Default: 64px */
+     --member-list-width-open:267px; /* Width of the member list when hovered Default: 267px */
+     --member-list-width-close: 62px; /* Width of the member list when not hovered Default: 62px */
+
+     /* Unused Variables: */
+     --other-custom-value1: 0px;
+     --other-custom-value2: 0px;
+     --other-custom-value3: 0px;
+     --other-custom-value4: 0px;
+ }

@@ -3,20 +3,22 @@
 	description: Compact mobile mode for Discord
 	author: TheMintGamer
 	version: 1	
-	update_time: 0/3/2025
+	update_time: 0/4/2025
 	website: https://nate2898.github.io
 	source: https://github.com/Nate2898/nFloat-Discordtheme 
 */ 
 
-:root{
+/* :root{
     --sidebar-delay-close: 1.3s;
-}
+	--sidebar-closed-width: 64px;
+	
+} */
 
 /* New version */
 .sidebarList_c48ade {
     display: block;
     right: 0;
-    width: 64px !important;
+    width: var(--sidebar-closed-width, 64px) !important;
     min-width: 0 !important;
     overflow: hidden;
     background: var(--background-secondary);
@@ -125,21 +127,21 @@
 .container_c8ffbb {
 	position: absolute !important;
 	right: 0;
-	top: 50%;
+	top: 49.8%;
 	transform: translateY(-50%);
-	width: 62px !important;
+	width: var(--member-list-width-close, 62px) !important;
 	min-width: 0 !important;
 	overflow: hidden;
 	background: var(--background-secondary);
-	z-index: 1000;
+	/* z-index: 1000; */
 	transition: width 0.3s ease-in-out, min-width 0.3s ease-in-out;
 	
 }
 
 .container_c8ffbb:hover  {
 	position: absolute !important;
-	width: 267px !important; 
-	min-width: 240px !important;
+	width: var(--member-list-width-open, 267px) !important;
+	/* min-width: 240px !important; */
 }
 
 /* Member category text  */
@@ -165,26 +167,20 @@
 	}
 }
 
+/* Message input */
+.form_f75fb0 {
+	margin-right: 62px;
+}
+
 /* new message popup */
 .newMessagesBar__0f481{
 	margin-right: 20px;
 }
 
-/* Message input */
-.channelBottomBarArea_f75fb0{
-	margin-right: 62px;
-}
-
-
 .scroller__36d07{
 	scroll-padding: 50px;
 }
 
-@media(max-width:1052px){
-	.sidebarRegion__23e6b{
-		width: 100px;
-	}
-}
 
 /* Settings menu */
 /* side settings menu */
