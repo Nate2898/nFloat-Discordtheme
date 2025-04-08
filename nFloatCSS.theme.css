@@ -26,6 +26,27 @@
 	container-type: normal !important;
 }
 
+/* Super small screen size */
+@media (max-width:400px){
+	.sidebarList_c48ade{
+		width: 0px !important;
+	}	
+	.container_c8ffbb, .container__7641b{
+		position: relative !important; 
+		right: -100px !important;
+	}
+	.content_f75fb0{
+		margin-right: -55px !important;
+	}
+	.username__0a06e{
+		overflow: visible;
+	}
+	.title_c38106{
+		justify-content: left;
+	}
+
+}
+
 /* Open sidebar on hover to user set width */
 .sidebar_c48ade:hover .sidebarList_c48ade{
     width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width)) !important;
@@ -123,23 +144,31 @@
 
 /* Collapsing the members list */
 .container_c8ffbb, .container__7641b {
-	position: absolute !important;
+	position: relative !important; 
 	right: 0;
-	top: 49.8%;
-	transform: translateY(-50%);
 	width: var(--member-list-width-close, 62px) !important;
 	min-width: 0 !important;
-	overflow: hidden;
 	z-index: 1000;
-	transition: width 0.3s ease-in-out var(--member-list-delay-close, 0s), min-width 0.3s ease-in-out var(--member-list-delay-close, 0s);
-	
+	transition: transform 0.3s ease-in-out var(--member-list-delay-close, 0s), min-width 1s ease-in-out var(--member-list-delay-close, 0s);
+}
+
+@media (min-width: 400px) {
+	.container_c8ffbb:hover, .container__7641b:hover  {
+		transform: translateX(var(--member-list-width-open, -203px));
+		transition: transform 0.3s ease-in-out var(--member-list-delay-open, 0s);
+	}
+}
+
+@media (max-width: 399px) {
+	.container_c8ffbb:hover, .container__7641b:hover  {
+		transform: translateX(-255px);
+		transition: transform 0.3s ease-in-out var(--member-list-delay-open, 0s);
+	}
 }
 
 .container_c8ffbb:hover, .container__7641b:hover  {
-	position: absolute !important;
-	transition: width 0.3s ease-in-out var(--member-list-delay-open, 0s);
-	width: var(--member-list-width-open, 267px) !important;
-	/* min-width: 240px !important; */
+	transform: translateX(var(--member-list-width-open, -203px));
+	transition: transform 0.3s ease-in-out var(--member-list-delay-open, 0s);
 }
 
 /* Member category text  */
@@ -185,9 +214,9 @@
 }
 
 /* Content area */
-.messagesWrapper__36d07{
+/* .messagesWrapper__36d07{
 	margin-right: 63px;
-}
+} */
 
 /* Friend online content area */
 @media(min-width:680px){
@@ -197,14 +226,14 @@
 }
 
 /* Message input */
-.form_f75fb0 {
+/* .form_f75fb0 {
 	margin-right: 62px;
-}
+} */
 
 /* new message popup */
-.newMessagesBar__0f481{
+/* .newMessagesBar__0f481{
 	margin-right: 20px;
-}
+} */
 
 .scroller__36d07{
 	scroll-padding: 50px;
