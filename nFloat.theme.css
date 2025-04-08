@@ -16,7 +16,7 @@
     /* Change the values below to customize the theme */
      --sidebar-delay-close: 1.3s; /* Delay before the sidebar closes when not hovered Default: 1.3s */
      --sidebar-closed-width: 64px; /* Width of the sidebar when not hovered Default: 64px */
-     --member-list-width-open:267px; /* Width of the member list when hovered Default: 267px */
+     --member-list-width-open: -203px; /* Width of the member list when hovered Default: 203px */
      --member-list-width-close: 62px; /* Width of the member list when not hovered Default: 62px */
      --member-list-delay-open: 0s; /* Delay before the member list opens when hovered Default: 0s */
 	 --member-list-delay-close: 0s; /* Delay before the member list closes when not hovered Default: 0s */
