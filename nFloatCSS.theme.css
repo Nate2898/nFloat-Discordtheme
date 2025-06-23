@@ -2,7 +2,7 @@
 	name: nFloat Updated
 	description: Compact mobile mode for Discord
 	author: TheMintGamer
-	version: 1	
+	version: 1.5	
 	update_time: 8/4/2025
 	website: https://nate2898.github.io
 	source: https://github.com/Nate2898/nFloat-Discordtheme 
@@ -44,9 +44,32 @@
 	.title_c38106{
 		justify-content: left;
 	}
-
+	/* Quick action buttons in the message box. */
+	.buttons__74017{ 
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0px !important;
+		justify-content: right !important;
+		
+	}
+	.channelBottomBarArea_f75fb0{
+		margin-right: 50px !important;
+		
+		
+	}
+	/* Move channels sidebar left more */
+	.visual-refresh .sidebar_c48ade {
+	margin-left: -50px;
+	transition: margin-left 0.2s ease-in-out;
+	}
+	.visual-refresh .sidebar_c48ade:hover {
+	margin-left: 0px;
+	transition: margin-left 0.2s ease-in-out;
+	}
+	.scroller__36d07{
+		margin-right: 52px !important;
+	}
 }
-
 /* Open sidebar on hover to user set width */
 .sidebar_c48ade:hover .sidebarList_c48ade{
     width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width)) !important;
@@ -87,15 +110,35 @@
 	transition: width 0.3s ease-in-out, min-width 0.3s ease-in-out;
 	height: 100%;
 }
- .nowPlayingColumn__133bf:hover {
+.nowPlayingColumn__133bf:hover {
 	width: 490px !important; 
 	min-width: 400px !important;
-	.headerAvatar__00943{
-		margin-left: 0px;
-		transition: margin-left 0.2s ease-in-out;
-	}
-	
-} 
+}
+
+.nowPlayingColumn__133bf:hover .headerAvatar__00943 {
+	margin-left: 0px;
+	transition: margin-left 0.2s ease-in-out;
+}
+
+/* Changes the text to a gif when active now is empty and closed */
+.nowPlayingColumn__133bf:hover .emptyText__7e549 {
+	color: white !important;
+	font-size: 14px !important;
+	vertical-align: middle;
+	background: none !important;
+	width: auto;
+	height: auto;
+}
+/* Changes the text to a gif when active now is empty and closed */
+.emptyText__7e549 {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background: url('https://media.tenor.com/bgR1joaDW6AAAAAM/modcheck-discord.gif') no-repeat center center / contain;
+	color: transparent !important;
+	font-size: 0 !important;
+	vertical-align: middle;
+}
 
 /* Changes by width */
 @media (max-width: 1200px){
@@ -271,5 +314,26 @@
 	}
 	.contentRegion__23e6b {
 		width: 50% !important;
+	}
+}
+
+/* settings content - Super small screen size */
+@media(min-width:521px){
+	.contentColumnDefault__23e6b{
+		padding: 60px 40px 80px !important;
+	}
+}
+
+@media(max-width:520px){
+	.contentColumn__23e6b{
+		max-width: 100% !important;
+		min-width: 99% !important;
+	}
+	.contentColumnDefault__23e6b{
+		padding: 10px 0px 80px 5px !important;
+	}
+	.contentRegionScroller__23e6b .tools__23e6b{
+		right: 20px !important;
+		top: 25px !important;
 	}
 }
