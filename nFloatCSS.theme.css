@@ -14,9 +14,9 @@
 	
 } */
 
-/* Right sidebar (servers, channels) */
+/* left sidebar (servers, channels) */
 .sidebarList_c48ade {
-    display: block;
+    /* display: flex; */
     right: 0;
     width: var(--sidebar-closed-width, 64px) !important;
     min-width: 0 !important;
