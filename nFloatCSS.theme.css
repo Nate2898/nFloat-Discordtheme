@@ -2,8 +2,8 @@
 	name: nFloat Updated
 	description: Compact mobile mode for Discord
 	author: TheMintGamer
-	version: 1.5	
-	update_time: 8/4/2025
+	version: 1.6	
+	update_time: 16/8/2025
 	website: https://nate2898.github.io
 	source: https://github.com/Nate2898/nFloat-Discordtheme 
 */ 
@@ -25,50 +25,54 @@
     height: 100%;
 	container-type: normal !important;
 }
+.iconsContainer__972a0{
+	padding-left: 0 !important;
+}
 
 /* Super small screen size */
-@media (max-width:400px){
-	.sidebarList_c48ade{
-		width: 0px !important;
-	}	
-	.container_c8ffbb, .container__7641b{
-		position: relative !important; 
-		right: -100px !important;
-	}
-	.content_f75fb0{
-		margin-right: -55px !important;
-	}
-	.username__0a06e{
-		overflow: visible;
-	}
-	.title_c38106{
-		justify-content: left;
-	}
-	/* Quick action buttons in the message box. */
-	.buttons__74017{ 
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0px !important;
-		justify-content: right !important;
-		
-	}
-	.channelBottomBarArea_f75fb0{
-		margin-right: 50px !important;
-		
-		
-	}
-	/* Move channels sidebar left more */
-	.visual-refresh .sidebar_c48ade {
-	margin-left: -50px;
-	transition: margin-left 0.2s ease-in-out;
-	}
-	.visual-refresh .sidebar_c48ade:hover {
-	margin-left: 0px;
-	transition: margin-left 0.2s ease-in-out;
-	}
-	.scroller__36d07{
-		margin-right: 52px !important;
-	}
+@media (max-width:430px){
+    .sidebarList_c48ade{
+        width: 0px !important;
+    }	
+    .container_c8ffbb, .container__7641b{
+        position: relative !important; 
+        right: -100px !important;
+    }
+    .content_f75fb0{
+        margin-right: -55px !important;
+    }
+    .messageListItem__5126c{
+        margin-left: -30px !important;
+    }
+    .username__0a06e{
+        overflow: visible;
+    }
+    .title_c38106{
+        justify-content: left;
+    }
+
+    /* Quick action buttons in the message box. */
+    .buttons__74017{ 
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0px !important;
+        justify-content: right !important;
+    }
+    .channelBottomBarArea_f75fb0{
+        margin-right: 50px !important;
+    }
+    /* Move channels sidebar left more */
+    .visual-refresh .sidebar_c48ade {
+    margin-left: -50px;
+    transition: margin-left 0.2s ease-in-out;
+    }
+    .visual-refresh .sidebar_c48ade:hover {
+    margin-left: 0px;
+    transition: margin-left 0.2s ease-in-out;
+    }
+    .scroller__36d07{
+        margin-right: 52px !important;
+    }
 }
 /* Open sidebar on hover to user set width */
 .sidebar_c48ade:hover .sidebarList_c48ade{
@@ -129,12 +133,57 @@
 	width: auto;
 	height: auto;
 }
+
+/* Quest in friend active now panel */
+.wrapper__960df::before {
+	content: "";
+	display: block;
+	width: 24px;
+	height: 24px;
+	background: url("https://cdn.discordapp.com/badge-icons/7d9ae358c8c5e118768335dbe68b4fb8.png") no-repeat center center;
+	background-size: contain;
+	position: absolute;
+	right: 17px;
+	transform: translateY(-50%);
+}
+.wrapper__960df > * {
+	display: none !important;
+}
+.nowPlayingColumn__133bf:hover .wrapper__960df::before {
+	display: none !important;
+}
+.nowPlayingColumn__133bf:hover .wrapper__960df > * {
+	display: block !important;
+}
+
+/* Active now game */
+.headerIcon__00943{
+	left: 20px !important;
+	top: 8px !important;
+	position: absolute !important;
+	transition: all 0.2s ease-in-out;
+}
+
+.nowPlayingColumn__133bf:hover .headerIcon__00943 {
+	left: 0 !important;
+	top: 0 !important;
+	position: relative !important;
+	transition: all 0.2s ease-in-out;
+}
+.nowPlayingColumn__133bf:not(:hover) .itemCard__7e549 {
+	width: 30px;
+    margin-left: -2px;
+}
+.nowPlayingColumn__133bf:not(:hover) .headerFull__00943 {
+	grid-template-columns: 36px minmax(20px, auto) 24px;
+}
+
 /* Changes the text to a gif when active now is empty and closed */
 .emptyText__7e549 {
 	display: inline-block;
 	width: 50px;
 	height: 50px;
-	background: url('https://media.tenor.com/bgR1joaDW6AAAAAM/modcheck-discord.gif') no-repeat center center / contain;
+	background: var(--sidebar-no-active-img);
 	color: transparent !important;
 	font-size: 0 !important;
 	vertical-align: middle;
@@ -161,15 +210,16 @@
 			margin-right: 0px;
 		}
 	}
-
+	/* Active now friends */
 	.header__7d20c{
 		display: flex;
 		flex-wrap: nowrap;
 		justify-content: center;
 		align-items: center;
+		text-align: center;
 	}
 	.headerAvatar__00943{
-		margin-left:-9px;
+		margin-left:-14px;
 		transition: margin-left 0.2s ease-in-out;
 	}
 }
