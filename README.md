@@ -8,7 +8,7 @@ Up to date with the latest versions of Discord, works with both [BetterDiscord](
 Put the ****nFloat.theme.css**** file in your themes folder. You can find the themes folder by going to **User Settings > Themes > Open Themes Folder** in Discord.
 
 ### Preview
-![Screenshot](./images/nFloatHB.gif)
+![Screenshot](./images/nFloat2.gif)
 
 ### Customizable Options
 You can customise the theme by changing the following values in the **nFloat.theme.css** file. T
