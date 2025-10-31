@@ -2,10 +2,19 @@
 	name: nFloat Updated
 	description: Compact mobile mode for Discord
 	author: TheMintGamer
-	version: 1.6	
-	update_time: 16/8/2025
+	version: 1.6.1	
+	update_time: 31/10/2025
 	website: https://nate2898.github.io
 	source: https://github.com/Nate2898/nFloat-Discordtheme 
+	update_log:
+		1.6.1 - 31/10/2025
+			- Added '.sidebar__5e434' and '.sidebarList__5e434' for halloween update.
+		1.6.0 - 16/8/2025
+			- Stable release.
+			- Added custom variable for sidebar closed width.
+			- Added custom variable for sidebar close delay.
+			- Fixed issue with member list collapsing on small screens.
+			- Fixed issue with active now panel on small screens.
 */ 
 
 /* :root{
@@ -15,7 +24,7 @@
 } */
 
 /* left sidebar (servers, channels) */
-.sidebarList_c48ade {
+.sidebarList_c48ade, .sidebarList__5e434 {
     /* display: flex; */
     right: 0;
     width: var(--sidebar-closed-width, 64px) !important;
@@ -31,9 +40,9 @@
 
 /* Super small screen size */
 @media (max-width:430px){
-    .sidebarList_c48ade{
-        width: 0px !important;
-    }	
+	.sidebarList_c48ade, .sidebarList__5e434{
+		width: 0px !important;
+	}   
     .container_c8ffbb, .container__7641b{
         position: relative !important; 
         right: -100px !important;
@@ -61,40 +70,43 @@
     .channelBottomBarArea_f75fb0{
         margin-right: 50px !important;
     }
-    /* Move channels sidebar left more */
-    .visual-refresh .sidebar_c48ade {
-    margin-left: -50px;
-    transition: margin-left 0.2s ease-in-out;
-    }
-    .visual-refresh .sidebar_c48ade:hover {
-    margin-left: 0px;
-    transition: margin-left 0.2s ease-in-out;
-    }
+	/* Move channels sidebar left more */
+	.visual-refresh .sidebar_c48ade, .visual-refresh .sidebar__5e434 {
+	margin-left: -50px;
+	transition: margin-left 0.2s ease-in-out;
+	}
+	.visual-refresh .sidebar_c48ade:hover, .visual-refresh .sidebar__5e434:hover {
+	margin-left: 0px;
+	transition: margin-left 0.2s ease-in-out;
+	}
     .scroller__36d07{
         margin-right: 52px !important;
     }
 }
 /* Open sidebar on hover to user set width */
-.sidebar_c48ade:hover .sidebarList_c48ade{
-    width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width)) !important;
-    transition: width 0.3s ease-in-out;
+.sidebar_c48ade:hover .sidebarList_c48ade,
+.sidebar__5e434:hover .sidebarList_c48ade,
+.sidebar_c48ade:hover .sidebarList__5e434,
+.sidebar__5e434:hover .sidebarList__5e434 {
+	width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width)) !important;
+	transition: width 0.3s ease-in-out;
 }
 
 /* quick actions fade */
-.sidebar_c48ade:not(:hover) .buttons__37e49 {
+.sidebar_c48ade:not(:hover) .buttons__37e49, .sidebar__5e434:not(:hover) .buttons__37e49 {
 	opacity: 0;
 	visibility: hidden;
-	transition: opacity 0.3s ease 1s, visibility 0s linear var(--sidebar-delay-close, 1.3s);
+		transition: opacity 0.3s ease 1s, visibility 0s linear var(--sidebar-delay-close, 1.3s);
 }
 
-.sidebar_c48ade .buttons__37e49 {
+.sidebar_c48ade .buttons__37e49, .sidebar__5e434 .buttons__37e49 {
 	opacity: 1;
 	visibility: visible;
 	transition: opacity 0.3s ease, visibility 0s linear;
 }
 /* Delay to close the sidebar */
-.sidebarList_c48ade:not(:hover) {
-    transition: width 0.3s ease-in-out var(--sidebar-delay-close, 1.3s);
+.sidebarList_c48ade:not(:hover), .sidebarList__5e434:not(:hover) {
+	transition: width 0.3s ease-in-out var(--sidebar-delay-close, 1.3s);
 }
 
 /* Add a gap at the bottom of the message list for game activity */
